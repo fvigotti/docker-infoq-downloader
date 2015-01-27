@@ -1,7 +1,5 @@
 FROM ubuntu:14.04
 
-# base packages
-# not required :
 RUN apt-get update && \
     apt-get -y --quiet upgrade && \
     apt-get -y --quiet install libxml2-dev libxslt1-dev git python python-setuptools python-dev build-essential libz-dev && \
@@ -23,8 +21,3 @@ VOLUME /opt/infoq-downloader/downloads
 
 WORKDIR /opt/infoq-downloader
 ENTRYPOINT ["python", "infoq_downloader.py"]
-
-
-
-# CMD  example : "http://www.infoq.com/presentations/experimenting-humans"
-#
